@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import Section from "./components/Section";
 import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
   const [openNav, setOpenNav] = useState(true);
@@ -11,10 +12,11 @@ function App() {
   return (
     <>
       <div className={`font-rubik font-semibold ${theme}`}>
-        <div className="dark:bg-black">
+        <div className="dark:bg-[#1B1214]">
           <Section theme="light" setTheme={setTheme}>
             <Home setOpenNav={setOpenNav} openNav={openNav} />
           </Section>
+          <About />
           {/*<Reveal>
              <Section theme="dark" setTheme={setTheme}>
               <About />

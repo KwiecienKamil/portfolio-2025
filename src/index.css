@@ -46,7 +46,6 @@
 @layer components {
   .tilt-hover {
     @apply [perspective:1000px] transition-transform duration-300 transform 
-           hover:[transform:rotateY(-15deg)_rotateX(6deg)] 
-           hover:bg-accent cursor-pointer;
+           hover:[transform:rotateY(-15deg)_rotateX(6deg)]  cursor-pointer;
   }
 }
