@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 765px;
+  --breakpoint-md: 1100px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1500px;
+  --font-sourceCode: "Source Code Pro", monospace;
+  --font-poppins: "Poppins", sans-serif;
+  --color-accent: #e9693e;
+  --color-light: #ffe8ce;
+
+  @keyframes circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  --animate-circle: circle 6s infinite ease-in-out;
+}
+
+.fancy-border {
+  border-radius: 52% 48% 71% 29% / 42% 56% 44% 58%;
+}
+
+.shadowed {
+  text-shadow: 0px 3px 0px #000, 0px 14px 10px rgba(0, 0, 0, 0.15),
+    0px 24px 2px rgba(0, 0, 0, 0.1), 0px 24px 30px rgba(0, 0, 0, 0.1);
+}
+
+.font-sourceCode {
+  font-family: var(--font-sourceCode);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+@layer components {
+  .tilt-hover {
+    @apply [perspective:1000px] transition-transform duration-300 transform 
+           hover:[transform:rotateY(-15deg)_rotateX(6deg)] 
+           hover:bg-accent cursor-pointer;
+  }
+}
