@@ -6,7 +6,10 @@ import BottomLinks from "./BottomLinks";
 
 const Home = () => {
   return (
-    <section id="home" className="min-h-[40rem] w-full relative flex items-center justify-between text-light px-[10%]">
+    <section
+      id="home"
+      className="min-h-[40rem] xl:min-h-[50rem] w-full relative flex items-center justify-between text-light px-[10%]"
+    >
       <Navbar />
       <video
         src={bgVideo4}
@@ -39,7 +42,7 @@ const Home = () => {
             }}
           />
         </div>
-        <button className="py-4 px-12 bg-light font-[800] text-black rounded-lg text-2xl font-sourceCode h-full mt-6 tilt-hover hover:bg-accent">
+        <button className="py-4 px-12 bg-accent font-[800] text-black rounded-lg text-2xl font-sourceCode h-full mt-6 tilt-hover">
           Contact
         </button>
       </div>

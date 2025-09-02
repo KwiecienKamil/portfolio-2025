@@ -9,17 +9,17 @@ const BottomLinks = () => {
         <a
           href="https://github.com/KwiecienKamil/portfolio-2025"
           target="_blank"
-          className=" bg-light flex items-center justify-center rounded-lg h-full px-4 tilt-hover hover:bg-accent"
+          className=" bg-black text-accent flex items-center justify-center rounded-lg h-full px-4 tilt-hover"
         >
           <FaGithub className="text-3xl" />
         </a>
-        <button className="py-4 px-6 bg-light rounded-lg text-2xl font-sourceCode h-full tilt-hover hover:bg-accent">
+        <button className="py-4 px-6 bg-black text-accent rounded-lg text-2xl font-sourceCode h-full tilt-hover">
           Download CV
         </button>
         <a
           href="https://github.com/KwiecienKamil/portfolio-2025"
           target="_blank"
-          className=" bg-light flex items-center justify-center rounded-lg h-full px-4 tilt-hover hover:bg-accent"
+          className=" bg-black text-accent flex items-center justify-center rounded-lg h-full px-4 tilt-hover"
         >
           <FaLinkedin className="text-3xl" />
         </a>

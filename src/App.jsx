@@ -5,6 +5,7 @@ import { useState } from "react";
 import Section from "./components/Section";
 import Home from "./components/Home";
 import About from "./components/About";
+import Reveal from "../Reveal";
 
 function App() {
   const [openNav, setOpenNav] = useState(true);
@@ -13,10 +14,15 @@ function App() {
     <>
       <div className={`font-rubik font-semibold ${theme}`}>
         <div className="dark:bg-[#1B1214]">
-          <Section theme="light" setTheme={setTheme}>
-            <Home setOpenNav={setOpenNav} openNav={openNav} />
-          </Section>
-          <About />
+          <Reveal>
+            <Section theme="light" setTheme={setTheme}>
+              <Home setOpenNav={setOpenNav} openNav={openNav} />
+            </Section>
+          </Reveal>
+          <Reveal>
+            <About />
+          </Reveal>
+
           {/*<Reveal>
              <Section theme="dark" setTheme={setTheme}>
               <About />
