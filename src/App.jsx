@@ -1,11 +1,10 @@
-// import "./css/skills.css";
-
 import { useState } from "react";
 
 import Section from "./components/Section";
 import Home from "./components/Home";
 import About from "./components/About";
 import Reveal from "../Reveal";
+import TechStack from "./components/TechStack";
 
 function App() {
   const [openNav, setOpenNav] = useState(true);
@@ -19,10 +18,8 @@ function App() {
               <Home setOpenNav={setOpenNav} openNav={openNav} />
             </Section>
           </Reveal>
-          <Reveal>
-            <About />
-          </Reveal>
-
+          <About />
+          <TechStack />
           {/*<Reveal>
              <Section theme="dark" setTheme={setTheme}>
               <About />
