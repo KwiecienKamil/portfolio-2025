@@ -47,7 +47,7 @@ const Home = () => {
         </button>
         </div>
       </div>
-      <div className="w-[50%] sm:w-[30%] lg:w-[35%] relative overflow-hidden bg-accent rounded-t-[1rem] border-2 border-black shadow-xl cursor-default">
+      <div className="w-[50%] sm:w-[30%] lg:w-[30%] relative overflow-hidden bg-accent rounded-t-[1rem] border-2 border-black shadow-xl cursor-default">
         <div className="relative flex items-center justify-center h-full w-full overflow-hidden">
           <img src={about} alt="me" className="w-full rounded-t-[20px] " />
         </div>

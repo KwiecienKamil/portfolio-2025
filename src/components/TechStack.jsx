@@ -30,7 +30,7 @@ import Reveal from "../../Reveal";
 const TechStack = () => {
   return (
     <Reveal>
-      <div className="flex items-center mt-[5rem] pb-2 text-light px-[10%]">
+      <div className="flex items-center justify-center sm:justify-start mt-[5rem] pb-2 text-light px-[10%]">
         <p className="dark:text-accent">Tech Stack</p>
         <span>
           <TbArrowsRight className="ml-4 animate-pulse" />

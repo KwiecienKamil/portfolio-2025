@@ -6,7 +6,7 @@ import { MdWork } from "react-icons/md";
 const About = () => {
   return (
     <section id="about" className=" px-[5%] sm:px-[10%] mt-[8rem] flex flex-col">
-      <div className="max-w-full md:max-w-1/2 pr-4 py-4 ">
+      <div className="w-full lg:max-w-2/3 pr-4 py-4 ">
         <Reveal>
           <div>
             <h3 className="text-accent font-bold text-4xl">About me</h3>
@@ -41,7 +41,7 @@ const About = () => {
             </div>
             <p className="text-brown-200 mt-2">Cheil, Warsaw, Poland</p>
           </div>
-          <div className="mt-8 w-full lg:w-[50%]">
+          <div className="mt-8 w-full">
             <div className="flex items-center gap-4 mb-2">
               <div className="h-12 w-12 flex items-center justify-center bg-black text-accent rounded-lg">
                 <LuNotebookPen className="h-full w-[50%]" />
