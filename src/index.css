@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Stencil+One&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -8,8 +9,12 @@
   --breakpoint-xl: 1500px;
   --font-sourceCode: "Source Code Pro", monospace;
   --font-poppins: "Poppins", sans-serif;
+  --font-saira: "Saira Stencil One", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-keyboard: "Libertinus Keyboard", sans-serif;
   --color-accent: #e9693e;
   --color-light: #ffe8ce;
+
 
   @keyframes circle {
     0% {
@@ -43,9 +48,12 @@
   font-family: var(--font-poppins);
 }
 
-@layer components {
-  .tilt-hover {
-    @apply [perspective:1000px] transition-transform duration-300 transform 
-           hover:[transform:rotateY(-15deg)_rotateX(6deg)]  cursor-pointer;
-  }
+
+@utility flex-center {
+    @apply flex justify-center items-center;
 }
+
+@utility col-center {
+    @apply flex flex-col justify-center items-center;
+}
+

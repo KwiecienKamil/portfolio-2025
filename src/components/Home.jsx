@@ -1,28 +1,112 @@
-import bgVideo4 from "../assets/bgVideo4.mp4";
-import about from "../assets/trimed.png";
+import { motion, useScroll } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+
+import bgVideo from "../assets/hero1.mp4";
+import me from "../assets/trimed.png"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Typewriter from "typewriter-effect";
-import Navbar from "./Navbar";
-import BottomLinks from "./BottomLinks";
+import { FaBarsStaggered } from "react-icons/fa6";
+import eye from '../assets/eye.mp4'
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Home = () => {
+  const [showPortal, setShowPortal] = useState(true);
+  const [showTexts, setShowTexts] = useState([false, false, false]);
+  const [videoEnded, setVideoEnded] = useState(false);
+
+  const videoRef = useRef();
+
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPortal(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const { scrollY } = useScroll();
+
+
+useGSAP(() => {
+  if (!videoRef.current) return;
+
+  const videoEl = videoRef.current;
+
+  videoEl.onloadedmetadata = () => {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: videoEl, 
+        start: "top top", 
+        end: "+=" + videoEl.duration, 
+        scrub: 1,
+        pin: true,
+      },
+    }).to(videoEl, {
+      currentTime: videoEl.duration,
+      ease: "none",
+    });
+  };
+}, [showPortal]);
+
+
+  useEffect(() => {
+    if (!showPortal) {
+      return scrollY.onChange((y) => {
+        setShowTexts([
+          y > 50,   
+          y > 200,  
+          y > 300,  
+        ]);
+      });
+    }
+  }, [scrollY, showPortal]);
+
   return (
-    <section
-      id="home"
-      className="min-h-[55rem] w-full relative flex flex-col sm:flex-row items-center  justify-center sm:justify-between text-light px-[10%]"
-    >
-      <Navbar />
-      <video
-        src={bgVideo4}
-        className="absolute top-0 left-0 h-full w-full object-cover "
-        autoPlay
-        muted
-        loop
-      ></video>
-      <div className="lg:pl-0 z-10 font-sourceCode font-semibold flex flex-col">
-        <h2 className="text-center sm:text-start lg:text-start text-2xl sm:text-4xl xl:text-5xl ">
+    <section id="hero" className={`w-full ${!showPortal ? "h-[80vh] bg-white" : "h-[100vh] bg-black"} relative overflow-hidden`}>
+      <motion.div
+        className="h-full w-full bg-darkblue-900"
+        initial={{ opacity: 0, scale: 1.2 }}
+        animate={{ opacity: showPortal ? 0 : 1, scale: 1 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+      />
+      {showPortal && (
+        <motion.div
+          initial={{ scale: 0, opacity: 0.8 }}
+          animate={{ scale: [0, 1.2, 1.8, 3], opacity: [1, 0.8, 0.5, 0] }}
+          transition={{ duration: 4, ease: "easeInOut" }}
+          className="absolute z-20 w-64 h-64 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-accent via-black to-yellow-400 shadow-[0_0_80px_30px_rgba(255,0,128,0.8)]"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: [1, 1.3, 1] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            className="absolute inset-4 rounded-full bg-black"
+          />
+        </motion.div>
+      )}
+        {!showPortal && !videoEnded && (
+        <motion.div
+          className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-10"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: videoEnded ? 0 : 1 }}
+          transition={{ duration: 1 }}
+        >
+          <video
+            src={bgVideo}
+            autoPlay
+            muted
+            playsInline
+            className="w-3/5 md:w-4/5"
+            onEnded={() => setVideoEnded(true)}
+          />
+           <div className="absolute top-1/3 left-[60%] md:left-4/6 font-semibold flex flex-col font-poppins">
+        <h2 className="text-center sm:text-start lg:text-start text-2xl sm:text-4xl xl:text-5xl">
           <span>Hello</span>, I'm
         </h2>
-        <h1 className="text-4xl font-[800] sm:text-5xl xl:text-6xl shadowed font-poppins text-accent">
+        <h1 className="text-4xl font-[800] sm:text-5xl xl:text-6xl shadowed font-saira text-accent">
           Kamil Kwiecień
         </h1>
         <div className="text-center sm:text-start lg:text-start text-sx sm:text-2xl xl:text-3xl">
@@ -41,18 +125,61 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="flex justify-center sm:justify-start">
-          <button className=" py-4 px-12 bg-accent font-[800] text-black rounded-lg text-md sm:text-2xl font-sourceCode h-full my-6 tilt-hover">
-          Contact
-        </button>
+        <div className="flex items-start mt-[2rem]">
+          <button className="bg-accent">Contact</button>
         </div>
-      </div>
-      <div className="w-[50%] sm:w-[30%] lg:w-[30%] relative overflow-hidden bg-accent rounded-t-[1rem] border-2 border-black shadow-xl cursor-default">
-        <div className="relative flex items-center justify-center h-full w-full overflow-hidden">
-          <img src={about} alt="me" className="w-full rounded-t-[20px] " />
         </div>
-      </div>
-      <BottomLinks />
+        </motion.div>
+      )}
+      {videoEnded && (
+        <motion.div
+          className="absolute inset-0 z-20 font-poppins"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="w-full h-24 flex items-center justify-between px-[5%]"
+          >
+            <div className="flex items-center gap-4">
+              <img src={me} alt="Kamil Kwiecień" className="max-w-[50px] rounded-full shadow-xl"/>
+              <div>
+                <p className="font-semibold">Kamil Kwiecień</p>
+              <span className="text-zinc-500">Frontend Developer</span>
+              </div>
+            </div>
+              <FaBarsStaggered className="text-2xl"/>
+          </motion.div>
+          <div className="h-[80%] flex items-center justify-between ">
+             <div className="">
+              <video 
+              src={eye}
+              muted
+              autoPlay
+              playsInline
+              loop
+              ></video>
+            </div>
+            <div className="relative max-w-1/2 -left-[15%] font-roboto">
+              <h5 className="text-4xl mb-2">About Me</h5>
+              <p className="w-full text-black text-lg leading-relaxed text-justify">
+              I am a frontend developer with commercial experience building web
+              applications for international brand. I have successfully
+              delivered high-quality websites and applications used by thousands
+              of users. My goal is to create software that makes people’s lives
+              easier and more enjoyable.
+            </p>
+            <div className="flex items-center gap-4 mt-8">
+              <button className="px-8 py-4 bg-[#1C58F1] text-white font-[700] rounded-sm">Contact</button>
+              <button className="px-8 py-4 bg-accent text-black font-[700] rounded-sm">My Work</button>
+            </div>
+            </div>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 };

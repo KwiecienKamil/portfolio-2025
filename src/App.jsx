@@ -12,14 +12,14 @@ function App() {
   return (
     <>
       <div className={`font-rubik font-semibold ${theme}`}>
-        <div className="dark:bg-[#1B1214]">
-          <Reveal>
+        <div className="dark:bg-[#000]">
             <Section theme="light" setTheme={setTheme}>
               <Home setOpenNav={setOpenNav} openNav={openNav} />
             </Section>
-          </Reveal>
-          <About />
-          <TechStack />
+            <Section theme="light" setTheme={setTheme}>
+           <About />
+           </Section>
+          {/* <TechStack /> */}
           {/*<Reveal>
              <Section theme="dark" setTheme={setTheme}>
               <About />

@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-8 left-0 h-[4rem] w-full z-12 flex justify-center ">
       <div className="h-full rounded-full flex items-center  gap-4">
-        <div className="h-full w-full bg-black rounded-full overflow-hidden text-light flex items-center justify-between">
+        <div className="h-full w-full bg-black/50 rounded-full overflow-hidden text-light flex items-center justify-between">
           {navButtons.map((btn) => (
             <ScrollLink
               key={btn.path}
