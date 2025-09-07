@@ -25,3 +25,8 @@ export const navButtons = [
     path: "contact",
   },
 ];
+
+export const socials = [
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/kamil-kwiecie%C5%84-1920b927b/" },
+  { name: "GitHub", href: "https://github.com/KwiecienKamil" },
+];

@@ -12,7 +12,7 @@
   --font-saira: "Saira Stencil One", sans-serif;
   --font-roboto: "Roboto", sans-serif;
   --font-keyboard: "Libertinus Keyboard", sans-serif;
-  --color-accent: #e9693e;
+  --color-accent: #D1B000;
   --color-light: #ffe8ce;
 
 
@@ -48,12 +48,4 @@
   font-family: var(--font-poppins);
 }
 
-
-@utility flex-center {
-    @apply flex justify-center items-center;
-}
-
-@utility col-center {
-    @apply flex flex-col justify-center items-center;
-}
 

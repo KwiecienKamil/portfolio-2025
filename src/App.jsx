@@ -5,19 +5,21 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Reveal from "../Reveal";
 import TechStack from "./components/TechStack";
+import Services from "./components/Services";
 
 function App() {
   const [openNav, setOpenNav] = useState(true);
   const [theme, setTheme] = useState("dark");
   return (
     <>
-      <div className={`font-rubik font-semibold ${theme}`}>
-        <div className="dark:bg-[#000]">
+      <div className={` font-semibold ${theme} font-roboto`}>
             <Section theme="light" setTheme={setTheme}>
               <Home setOpenNav={setOpenNav} openNav={openNav} />
             </Section>
-            <Section theme="light" setTheme={setTheme}>
+            <Services />
+            <Section theme="dark" setTheme={setTheme}>
            <About />
+           
            </Section>
           {/* <TechStack /> */}
           {/*<Reveal>
@@ -36,7 +38,6 @@ function App() {
             </Section>
           </Reveal> */}
         </div>
-      </div>
     </>
   );
 }
