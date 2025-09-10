@@ -9,8 +9,6 @@ export function Model(props) {
   const { nodes, materials, animations } = useGLTF('/models/holy_dragon_arena_of_valor.glb')
   const { actions } = useAnimations(animations, group)
 
-
-
   useGSAP(() => {
     const tl = gsap.timeline();
 

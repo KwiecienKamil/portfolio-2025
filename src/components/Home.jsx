@@ -15,9 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Home = () => {
-  const [showPortal, setShowPortal] = useState(true);
-  const [showTexts, setShowTexts] = useState([false, false, false]);
-  const [videoEnded, setVideoEnded] = useState(true);
 
   const isMobile = useMediaQuery({ maxWidth: 853 });
 

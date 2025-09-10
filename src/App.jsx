@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Reveal from "../Reveal";
 import TechStack from "./components/TechStack";
-import Services from "./components/Services";
+import SectionHeader from "./components/SectionHeader";
 
 function App() {
   const [openNav, setOpenNav] = useState(true);
@@ -16,11 +16,10 @@ function App() {
             <Section theme="light" setTheme={setTheme}>
               <Home setOpenNav={setOpenNav} openNav={openNav} />
             </Section>
-            <Services />
-            <Section theme="dark" setTheme={setTheme}>
+            <Reveal>
            <About />
+           </Reveal>
            
-           </Section>
           {/* <TechStack /> */}
           {/*<Reveal>
              <Section theme="dark" setTheme={setTheme}>
