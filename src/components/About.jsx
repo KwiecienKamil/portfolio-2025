@@ -38,7 +38,7 @@ const About = () => {
 
       <div className="flex gap-8 px-[5%] py-8">
         <Reveal>
-          <div className="bg-accent rounded-xl">
+          <div className="border-accent border-2 rounded-xl overflow-hidden">
             <img
               src={me}
               alt="Kamil Kwiecień"
@@ -57,8 +57,9 @@ const About = () => {
               more enjoyable.
             </p>
             <div className="flex justify-center gap-8 mt-8">
+              <button className='px-6 py-4 border-1 bg-accent text-light hover:bg-[#dec012] hover:text-black duration-500 cursor-pointer shadow-lg'>Contact</button>
               <button className="px-8 py-4 border-1 border-black hover:bg-black hover:text-white duration-500 cursor-pointer shadow-lg">
-                Work Experience
+                Projects
               </button>
             </div>
           </div>
@@ -73,10 +74,10 @@ const About = () => {
           {[...services, ...services].map((service, idx) => (
             <div
               key={idx}
-              className="service-card min-w-[250px] h-[200px] flex flex-col items-center justify-center border-2 border-black bg-gradient-to-tr from-light to-accent rounded-xl shadow-md"
+              className="service-card min-w-[250px] h-[200px] flex flex-col items-center justify-center border-[2px] border-accent rounded-xl shadow-md transition-transform duration-300 ease-out hover:-translate-y-1 hover:rotate-x-6 cursor-default" 
             >
-              <span className="text-lg font-semibold">{service.name}</span>
-              <span className="text-3xl mt-4 text-accent">{service.icon}</span>
+              <span className="text-lg font-semibold text-zinc-900">{service.name}</span>
+              <span className="text-5xl mt-4 text-accent animate-circle">{service.icon}</span>
             </div>
           ))}
         </div>
