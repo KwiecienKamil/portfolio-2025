@@ -5,6 +5,7 @@ import me from "../../public/assets/trimed.png";
 import { services } from "../utils/Helpers";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { Link } from "react-scroll";
 
 const About = () => {
   const carouselRef = useRef(null);
@@ -33,9 +34,8 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="h-[200vh]">
+    <section id="about">
       <SectionHeader sectionName="About" textColor="white" />
-
       <div className="flex gap-8 px-[5%] py-8">
         <Reveal>
           <div className="border-accent border-2 rounded-xl overflow-hidden">
@@ -57,10 +57,20 @@ const About = () => {
               more enjoyable.
             </p>
             <div className="flex justify-center gap-8 mt-8">
-              <button className='px-6 py-4 border-1 bg-accent text-light hover:bg-[#dec012] hover:text-black duration-500 cursor-pointer shadow-lg'>Contact</button>
-              <button className="px-8 py-4 border-1 border-black hover:bg-black hover:text-white duration-500 cursor-pointer shadow-lg">
+              <Link 
+              to="contact" 
+              smooth
+              offset={0}
+              duration={2000} 
+              className='px-6 py-4 border-1 bg-accent text-light hover:bg-[#dec012] hover:text-black duration-500 cursor-pointer shadow-lg'>Contact</Link>
+              <Link 
+              to="projects" 
+              smooth
+              offset={0}
+              duration={2000}
+               className="px-8 py-4 border-1 border-black hover:bg-black hover:text-white duration-500 cursor-pointer shadow-lg">
                 Projects
-              </button>
+              </Link>
             </div>
           </div>
         </Reveal>

@@ -10,6 +10,11 @@ import { FaRobot } from "react-icons/fa6";
 import { RiUploadCloud2Fill } from "react-icons/ri";
 import { FaMoneyCheckDollar } from "react-icons/fa6";
 
+import img1 from "../../public/assets/12.png";
+import img2 from "../../public/assets/8.png";
+import img3 from "../../public/assets/13.png";
+import img4 from "../../public/assets/9.png";
+
 
 export const navButtons = [
   {
@@ -75,5 +80,49 @@ export const services = [
     id: 7,
     name: "Marketing",
     icon: <FaMoneyCheckDollar />
+  },
+]
+
+
+export const projectsInfo = [
+  {
+    id: 1,
+    title: "Mini game for a global brand",
+    stack: ["React.js", "JavaScript", "CSS", "AWS"],
+    webLink: "https://www.samsung.com/pl/offer/smartthings-offers/#quiz",
+    githubLink: "",
+    img: "/assets/12.png"
+  },
+  {
+    id: 2,
+    title: "Ogarnij.To",
+    stack: ["React.js", "TypeScript", "Tailwind", "Node.js", "MySql", "OpenAI"],
+    webLink: "https://ogarnijto.org/?beta=true",
+    githubLink: "https://github.com/KwiecienKamil/portal-studenta",
+    img: "/assets/13.png"
+  },
+  {
+    id: 3,
+    title: "Productive",
+    stack: ["React.js", "TypeScript", "Tailwind", "Node.js", "MySql", "Vitest"],
+    webLink: "https://productive-task-management-app-d4hq.vercel.app/",
+    githubLink: "https://github.com/KwiecienKamil/Productive---Task-Management-App",
+    img: img2
+  },
+  {
+    id: 4,
+    title: "CoNaTalerz",
+    stack: ["Next.js", "TypeScript", "OpenAI", "Tailwind",],
+    webLink: "https://productive-task-management-app-d4hq.vercel.app/",
+    githubLink: "https://github.com/KwiecienKamil/Productive---Task-Management-App",
+    img: img4
+  },
+  {
+    id: 5,
+    title: "Hotel landing page",
+    stack: ["React", "JavaScript", "Tailwind",],
+    webLink: "https://github.com/KwiecienKamil/MountainHotelWebsite",
+    githubLink: "https://adorable-clafoutis-0fc878.netlify.app/",
+    img: "/assets/10.png"
   },
 ]
