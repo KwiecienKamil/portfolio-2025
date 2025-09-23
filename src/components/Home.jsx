@@ -1,4 +1,4 @@
-import {  useRef } from "react";
+import { useRef } from "react";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -7,58 +7,54 @@ import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float, Lightformer } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
-import {  Model } from "./Model";
+import { Model } from "./Model";
 import HeroHeader from "./HeroHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Home = () => {
-
   const isMobile = useMediaQuery({ maxWidth: 853 });
-
   const scrollRef = useRef();
 
+  useGSAP(() => {
+    if (!scrollRef.current) return;
+    const item = scrollRef.current;
 
-
-
-
-useGSAP(() => {
-  if (!scrollRef.current) return;
-  const item = scrollRef.current
-
-  gsap.to(item, {
-    x:250 * 3 + 8,
-    rotation: 360,
-    scale: 1.5,
-    yoyo: true,
-    scrollTrigger: {
-      trigger: item,
-      start: "bottom bottom",
-      end: "top 20%",
-      scrub: true
-    },
-    ease: 'power1.inOut'
-  }, [])
-
-  
-}, []);
-
-
-
+    gsap.to(
+      item,
+      {
+        x: 250 * 3 + 8,
+        rotation: 360,
+        scale: 1.5,
+        yoyo: true,
+        scrollTrigger: {
+          trigger: item,
+          start: "bottom bottom",
+          end: "top 20%",
+          scrub: true,
+        },
+        ease: "power1.inOut",
+      },
+      []
+    );
+  }, []);
 
   return (
-    <section id="hero" className={`w-full h-screen bg-white flex flex-col justify-end  relative overflow-hidden`}>
-    <Navbar />
-    <figure className="absolute inset-0 z-1" style={{ width: "100vw", height: "100vh", overflow: "hidden"}}>
-    <Canvas
+    <section
+      id="hero"
+      className={`w-full h-screen bg-white flex flex-col justify-end  relative overflow-hidden`}
+    >
+      <Navbar />
+      <figure
+        className="absolute inset-0 z-1"
+        style={{ width: "100vw", height: "100vh", overflow: "hidden" }}
+      >
+        <Canvas
           shadows
           camera={{ position: [10, 0, -10], fov: 17.5, near: 1, far: 20 }}
         >
           <ambientLight intensity={0.5} />
-          <Float speed={0.5}>
-            <Model scale={isMobile ? 0.9 : 1.5} />
-          </Float>
+          <Model scale={isMobile ? 0.9 : 1.5} />
           <Environment resolution={256}>
             <group rotation={[-Math.PI / 3, 4, 1]}>
               <Lightformer
@@ -88,8 +84,8 @@ useGSAP(() => {
             </group>
           </Environment>
         </Canvas>
-        </figure>
-        <HeroHeader />
+      </figure>
+      <HeroHeader />
     </section>
   );
 };
