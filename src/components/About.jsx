@@ -45,14 +45,19 @@ const About = () => {
           </div>
         </Reveal>
         <Reveal>
-          <div className="w-full lg:w-[90%]">
-            <p className="text-lg sm:text-xl leading-relaxed text-justify">
+          <div className="w-full ml-auto lg:w-[90%]">
+            <p className="text-md sm:text-xl leading-relaxed text-justify">
               Frontend developer with commercial experience building web
-              applications for international brand. Successfully
-              delivered high-quality websites and applications used by thousands
-              of users. Dedicated to developing solutions that deliver strong business impact while providing an enjoyable user experience.
+              applications for international brand. Successfully delivered
+              high-quality websites and applications used by thousands of users.
+              Dedicated to developing solutions that deliver strong business
+              impact while providing an enjoyable user experience.
             </p>
-            <img src={group} alt="Characteristics" className="w-[90%] mx-auto my-8"/>
+            <img
+              src={group}
+              alt="Characteristics"
+              className="w-[80%] mx-auto my-8"
+            />
             {/* <div className="flex gap-8 mt-4 justify-center">
               <Link
                 to="contact"

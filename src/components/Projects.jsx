@@ -10,43 +10,43 @@ const Projects = () => {
         {projectsInfo.map((project) => (
           <div
             key={project.id}
-            className="border-2 hover:border-accent duration-300 sm:pb-0 flex flex-col justify-between"
+            className="border-2 duration-300 sm:pb-0 flex flex-col justify-between"
           >
             <div>
-            <img
-              src={project.img}
-              alt={project.title}
-              className="w-full object-cover h-[20rem]"
-            />
-            <div className="p-4 flex flex-col justify-between gap-2">
-              <h3 className="text-3xl">{project.title}</h3>
-              <ul className="flex items-center flex-wrap gap-4">
-                {project.stack.map((tech, index) => (
-                  <li
-                    key={index}
-                    className="px-4 py-2 bg-black text-white rounded-xl text-xs sm:text-lg"
-                  >
-                    {tech}
-                  </li>
-                ))}
-              </ul>
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full object-cover h-[20rem]"
+              />
+              <div className="p-4 flex flex-col justify-between gap-2">
+                <h3 className="text-3xl">{project.title}</h3>
+                <ul className="flex items-center flex-wrap gap-4">
+                  {project.stack.map((tech, index) => (
+                    <li
+                      key={index}
+                      className="px-4 py-2 bg-black text-white rounded-xl text-xs sm:text-lg"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              </div>
-              <div className="flex items-center gap-4 p-4">
-                {project.githubLink && (
-                  <a
-                    href={project.githubLink}
-                    className="px-8 py-4 border-1 bg-accent text-light hover:bg-[#dec012] hover:text-black duration-500 cursor-pointer shadow-lg"
-                  >
-                    Code
-                  </a>
-                )}
+            </div>
+            <div className="flex items-center gap-4 p-4">
+              {project.githubLink && (
                 <a
-                  href={project.webLink}
-                  className="px-8 py-4 border-1 border-black hover:bg-black hover:text-white duration-500 cursor-pointer shadow-lg"
+                  href={project.githubLink}
+                  className="px-8 py-4 border-1 border-black text-black hover:bg-accent  duration-500 cursor-pointer shadow-lg"
                 >
-                  Live
+                  Code
                 </a>
+              )}
+              <a
+                href={project.webLink}
+                className="px-8 py-4 border-1 border-black hover:bg-accent hover:text-white duration-500 cursor-pointer shadow-lg"
+              >
+                Live
+              </a>
             </div>
           </div>
         ))}
