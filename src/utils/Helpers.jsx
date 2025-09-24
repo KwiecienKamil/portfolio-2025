@@ -44,6 +44,18 @@ export const socials = [
   { name: "GitHub", href: "https://github.com/KwiecienKamil" },
 ];
 
+export const contactInfo = [
+  {
+    id: 1,
+    type: "Email",
+    value: "kamilkwiecien9@gmail.com"
+  },
+  {
+    id: 1,
+    type: "Phone",
+    value: "+48 533 532 056"
+  }
+]
 
 export const services = [
   {

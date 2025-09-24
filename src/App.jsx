@@ -7,6 +7,7 @@ import Reveal from "../Reveal";
 import TechStack from "./components/TechStack";
 import SectionHeader from "./components/SectionHeader";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   const [openNav, setOpenNav] = useState(true);
@@ -22,6 +23,9 @@ function App() {
            </Reveal>
            <Reveal>
            <Projects />
+           </Reveal>
+           <Reveal>
+            <Contact />
            </Reveal>
            
           {/* <TechStack /> */}
