@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <section
       id="hero"
-      className={`w-full h-screen bg-white flex flex-col justify-end  relative overflow-hidden`}
+      className={`w-full h-[90vh] bg-white flex flex-col justify-end  relative overflow-hidden`}
     >
       <Navbar />
       <figure

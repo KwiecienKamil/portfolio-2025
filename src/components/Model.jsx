@@ -24,7 +24,7 @@ export function Model(props) {
 
     tl.to(ballRef.current.position, {
       y: 6,
-      x: -6,
+      x: -4,
       duration: 1,
       ease: "power1.inOut",
       yoyo: true,
@@ -45,7 +45,7 @@ export function Model(props) {
     });
 
     tl.to(ballRef.current.position, {
-      x: 3,
+      x: 1,
       y: -1,
       z: 5,
       duration: 2,

@@ -6,30 +6,33 @@ const Projects = () => {
   return (
     <section id="projects" className="my-12">
       <SectionHeader sectionName="Projects" textColor="white" />
-      <div className="px-[5%] grid grid-cols-2 gap-12 mt-12">
+      <div className="px-[5%] grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
         {projectsInfo.map((project) => (
           <div
             key={project.id}
-            className="border-2 hover:border-accent duration-300"
+            className="border-2 hover:border-accent duration-300 sm:pb-0 flex flex-col justify-between"
           >
+            <div>
             <img
               src={project.img}
               alt={project.title}
-              className="w-full object-cover max-h-[60%]"
+              className="w-full object-cover h-[20rem]"
             />
             <div className="p-4 flex flex-col justify-between gap-2">
               <h3 className="text-3xl">{project.title}</h3>
-              <ul className="flex items-center gap-4">
+              <ul className="flex items-center flex-wrap gap-4">
                 {project.stack.map((tech, index) => (
                   <li
                     key={index}
-                    className="px-4 py-2 bg-black text-white rounded-xl"
+                    className="px-4 py-2 bg-black text-white rounded-xl text-xs sm:text-lg"
                   >
                     {tech}
                   </li>
                 ))}
               </ul>
-              <div className="flex items-center gap-4 mt-4">
+              </div>
+              </div>
+              <div className="flex items-center gap-4 p-4">
                 {project.githubLink && (
                   <a
                     href={project.githubLink}
@@ -44,7 +47,6 @@ const Projects = () => {
                 >
                   Live
                 </a>
-              </div>
             </div>
           </div>
         ))}
