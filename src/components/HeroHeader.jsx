@@ -6,7 +6,7 @@ const HeroHeader = () => {
   return (
     <div className='px-[5%] pb-[5%] z-2'>
         <div className='mb-6 cursor-default'>
-          <h1 className='text-[70px] font-[600]'>Hello, I'm <span className='text-accent font-[900]'>Kamil</span></h1>
+          <h1 className='text-[70px] sm:text-[90px] font-[600]'>Hello, I'm <span className='text-accent font-[900]'>Kamil</span></h1>
           <div className="text-5xl text-black font-story">
           <Typewriter
           onInit={(typewriter) => {

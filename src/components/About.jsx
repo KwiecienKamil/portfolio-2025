@@ -2,6 +2,7 @@ import "../css/skills.css";
 import Reveal from "../../Reveal";
 import SectionHeader from "./SectionHeader";
 import me from "../../public/assets/trimed.png";
+import group from "../../public/assets/group5.png";
 import { services } from "../utils/Helpers";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -33,26 +34,26 @@ const About = () => {
   return (
     <section id="about">
       <SectionHeader sectionName="About" textColor="white" />
-      <div className="flex gap-8 px-[5%] py-8">
+      <div className="flex flex-col sm:flex-row gap-12 px-[5%] py-8">
         <Reveal>
-          <div className="border-accent border-2 rounded-xl overflow-hidden">
+          <div className="border-accent border-2 rounded-xl overflow-hidden w-[60%] sm:w-[20rem] mx-auto sm:mx-0">
             <img
               src={me}
               alt="Kamil Kwiecień"
-              className="relative object-cover max-w-[12rem]"
+              className="relative object-cover w-full"
             />
           </div>
         </Reveal>
         <Reveal>
-          <div className="w-full lg:w-[60%]">
-            <p className="text-xl leading-relaxed text-justify">
-              I'm a frontend developer with commercial experience building web
-              applications for international brand. I have successfully
+          <div className="w-full lg:w-[90%]">
+            <p className="text-lg sm:text-xl leading-relaxed text-justify">
+              Frontend developer with commercial experience building web
+              applications for international brand. Successfully
               delivered high-quality websites and applications used by thousands
-              of users. My goal is to create software that makes people's lives
-              more enjoyable.
+              of users. Dedicated to developing solutions that deliver strong business impact while providing an enjoyable user experience.
             </p>
-            <div className="flex  gap-8 mt-8">
+            <img src={group} alt="Characteristics" className="w-[90%] mx-auto my-8"/>
+            {/* <div className="flex gap-8 mt-4 justify-center">
               <Link
                 to="contact"
                 smooth
@@ -71,7 +72,7 @@ const About = () => {
               >
                 Projects
               </Link>
-            </div>
+            </div> */}
           </div>
         </Reveal>
       </div>

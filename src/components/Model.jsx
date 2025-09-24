@@ -16,14 +16,14 @@ export function Model(props) {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#hero",
+        trigger: "#home",
         end: "bottom center",
         scrub: true,
       },
     });
 
     tl.to(ballRef.current.position, {
-      y: 6,
+      y: 8,
       x: -4,
       duration: 1,
       ease: "power1.inOut",

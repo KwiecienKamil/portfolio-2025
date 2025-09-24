@@ -78,8 +78,6 @@ const Navbar = () => {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setShowBurger(currentScrollY <= lastScrollY || currentScrollY < 10);
-
       lastScrollY = currentScrollY
     }
     window.addEventListener("scroll", handleScroll, {
@@ -106,17 +104,17 @@ const Navbar = () => {
     <>
     <nav
     ref={navRef}
-    className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-zinc-900 text-white py-28 gap-y-10 md:w-1/2 md:left-1/2"
+    className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-zinc-900 text-white py-28 gap-y-10 top-0 md:w-1/2 md:left-1/2"
     >
-       <div className="flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-8xl">
-          {["home", "about", "work", "contact"].map(
+       <div className="flex flex-col text-5xl gap-y-2 sm:text-8xl">
+          {["home", "about", "projects", "contact"].map(
             (section, index) => (
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
                 <Link
                   className="transition-all duration-300 cursor-pointer hover:text-accent"
                   to={`${section}`}
                   smooth
-                  offset={0}
+                  offset={-50}
                   duration={2000}
                 >
                   {section}
@@ -154,11 +152,11 @@ const Navbar = () => {
         </div>
     </nav>
     <div
-        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black group rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
+        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black group cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
         onClick={toggleMenu}
         style={
           showBurger
-            ? { clipPath: "circle(50% at 50% 50%)" }
+            ? { clipPath: "circle(60% at 50% 50%)" }
             : { clipPath: "circle(0% at 50% 50%)" }
         }
       >
