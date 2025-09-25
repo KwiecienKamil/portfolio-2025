@@ -28,7 +28,7 @@ const HeroHeader = () => {
       </div>
       <div className="flex items-center gap-8">
         <Link
-          to="about"
+          to="contact"
           smooth
           offset={0}
           duration={2000}

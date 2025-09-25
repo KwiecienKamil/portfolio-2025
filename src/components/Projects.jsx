@@ -36,14 +36,14 @@ const Projects = () => {
               {project.githubLink && (
                 <a
                   href={project.githubLink}
-                  className="px-8 py-4 border-1 border-black text-black hover:bg-accent  duration-500 cursor-pointer shadow-lg"
+                  className="px-8 py-4 border-2 text-black hover:border-accent duration-300 cursor-pointer shadow-lg hover:animate-pulse"
                 >
                   Code
                 </a>
               )}
               <a
                 href={project.webLink}
-                className="px-8 py-4 border-1 border-black hover:bg-accent hover:text-white duration-500 cursor-pointer shadow-lg"
+                className="px-8 py-4 border-2 text-black hover:border-accent duration-300 cursor-pointer shadow-lg"
               >
                 Live
               </a>
