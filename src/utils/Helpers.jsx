@@ -15,7 +15,6 @@ import img2 from "../../public/assets/8.png";
 import img3 from "../../public/assets/13.png";
 import img4 from "../../public/assets/9.png";
 
-
 export const navButtons = [
   {
     name: "Home",
@@ -40,7 +39,10 @@ export const navButtons = [
 ];
 
 export const socials = [
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/kamil-kwiecie%C5%84-1920b927b/" },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/kamil-kwiecie%C5%84-1920b927b/",
+  },
   { name: "GitHub", href: "https://github.com/KwiecienKamil" },
 ];
 
@@ -48,53 +50,52 @@ export const contactInfo = [
   {
     id: 1,
     type: "Email",
-    value: "kamilkwiecien9@gmail.com"
+    value: "kamilkwiecien9@gmail.com",
   },
   {
     id: 1,
     type: "Phone",
-    value: "+48 533 532 056"
-  }
-]
+    value: "+48 533 532 056",
+  },
+];
 
 export const services = [
   {
     id: 1,
     name: "Web developement",
-    icon: <MdOutlineWeb />
+    icon: <MdOutlineWeb />,
   },
   {
     id: 2,
     name: "Databases",
-    icon: <FaDatabase />
+    icon: <FaDatabase />,
   },
   {
     id: 3,
     name: "APIs",
-    icon: <FaServer />
+    icon: <FaServer />,
   },
   {
     id: 4,
     name: "State managament",
-    icon: <SiRedux />
+    icon: <SiRedux />,
   },
   {
     id: 5,
     name: "AI integration",
-    icon: <FaRobot />
+    icon: <FaRobot />,
   },
   {
     id: 6,
     name: "Hosting",
-    icon: <RiUploadCloud2Fill />
+    icon: <RiUploadCloud2Fill />,
   },
   {
     id: 7,
     name: "Marketing",
-    icon: <FaMoneyCheckDollar />
+    icon: <FaMoneyCheckDollar />,
   },
-]
-
+];
 
 export const projectsInfo = [
   {
@@ -103,38 +104,51 @@ export const projectsInfo = [
     stack: ["React.js", "JavaScript", "CSS", "AWS"],
     webLink: "https://www.samsung.com/pl/offer/smartthings-offers/#quiz",
     githubLink: "",
-    img: "/assets/12.png"
+    img: "/assets/12.png",
   },
   {
     id: 2,
     title: "Ogarnij.To",
-    stack: ["React.js", "TypeScript", "Tailwind", "Node.js", "MySql", "OpenAI"],
+    stack: [
+      "React.js",
+      "TypeScript",
+      "Redux",
+      "CSS",
+      "Tailwind",
+      "Node.js",
+      "MySql",
+      "OpenAI",
+      "OAuth2",
+      "Stripe",
+    ],
     webLink: "https://ogarnijto.org/?beta=true",
     githubLink: "https://github.com/KwiecienKamil/portal-studenta",
-    img: "/assets/13.png"
+    img: "/assets/13.png",
   },
   {
     id: 3,
     title: "Productive",
     stack: ["React.js", "TypeScript", "Tailwind", "Node.js", "MySql", "Vitest"],
     webLink: "https://productive-task-management-app-d4hq.vercel.app/",
-    githubLink: "https://github.com/KwiecienKamil/Productive---Task-Management-App",
-    img: img2
+    githubLink:
+      "https://github.com/KwiecienKamil/Productive---Task-Management-App",
+    img: img2,
   },
   {
     id: 4,
     title: "CoNaTalerz",
-    stack: ["Next.js", "TypeScript", "OpenAI", "Tailwind",],
+    stack: ["Next.js", "TypeScript", "OpenAI", "Tailwind"],
     webLink: "https://productive-task-management-app-d4hq.vercel.app/",
-    githubLink: "https://github.com/KwiecienKamil/Productive---Task-Management-App",
-    img: img4
+    githubLink:
+      "https://github.com/KwiecienKamil/Productive---Task-Management-App",
+    img: img4,
   },
   {
     id: 5,
     title: "Hotel landing page",
-    stack: ["React", "JavaScript", "Tailwind",],
+    stack: ["React", "JavaScript", "Tailwind"],
     webLink: "https://github.com/KwiecienKamil/MountainHotelWebsite",
     githubLink: "https://adorable-clafoutis-0fc878.netlify.app/",
-    img: "/assets/10.png"
+    img: "/assets/10.png",
   },
-]
+];

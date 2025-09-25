@@ -37,13 +37,15 @@ const Projects = () => {
                 <a
                   href={project.githubLink}
                   className="px-8 py-4 border-2 text-black hover:border-accent duration-300 cursor-pointer shadow-lg hover:animate-pulse"
+                  target="_blank"
                 >
                   Code
                 </a>
               )}
               <a
                 href={project.webLink}
-                className="px-8 py-4 border-2 text-black hover:border-accent duration-300 cursor-pointer shadow-lg"
+                className="px-8 py-4 border-2 text-black hover:border-green-500 duration-300 cursor-pointer shadow-lg"
+                target="_blank"
               >
                 Live
               </a>
