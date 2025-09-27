@@ -10,10 +10,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID,  
-        import.meta.env.VITE_TEMPLATE_id,  
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         form.current,
-        import.meta.env.VITE_PUBLIC_KEY   
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -49,7 +49,6 @@ const Contact = () => {
         </div>
       </div>
       <div className="w-[24rem] md:w-[30rem]">
-        {/* ✅ tu tylko dodaliśmy ref i onSubmit */}
         <form
           ref={form}
           onSubmit={sendEmail}
