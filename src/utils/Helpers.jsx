@@ -9,6 +9,8 @@ import { SiRedux } from "react-icons/si";
 import { FaRobot } from "react-icons/fa6";
 import { RiUploadCloud2Fill } from "react-icons/ri";
 import { FaMoneyCheckDollar } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 import img1 from "../../public/assets/12.png";
 import img2 from "../../public/assets/8.png";
@@ -42,8 +44,13 @@ export const socials = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/kamil-kwiecie%C5%84-1920b927b/",
+    icon: <FaLinkedin />,
   },
-  { name: "GitHub", href: "https://github.com/KwiecienKamil" },
+  {
+    name: "GitHub",
+    href: "https://github.com/KwiecienKamil",
+    icon: <FaGithub />,
+  },
 ];
 
 export const contactInfo = [

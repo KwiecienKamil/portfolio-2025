@@ -5,17 +5,16 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Navbar = () => {
-   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(true);
 
   const navRef = useRef(null);
   const linksRef = useRef([]);
   const contactRef = useRef(null);
-   const topLineRef = useRef(null);
+  const topLineRef = useRef(null);
   const bottomLineRef = useRef(null);
   const tl = useRef(null);
   const iconTl = useRef(null);
-
 
   useGSAP(() => {
     gsap.set(navRef.current, { xPercent: 100 });
@@ -73,21 +72,17 @@ const Navbar = () => {
       );
   }, []);
 
-
   useEffect(() => {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      lastScrollY = currentScrollY
-    }
+      lastScrollY = currentScrollY;
+    };
     window.addEventListener("scroll", handleScroll, {
       passive: true,
     });
     return () => window.removeEventListener("scroll", handleScroll);
-  },[]);
-
-
-
+  }, []);
 
   const toggleMenu = () => {
     if (isOpen) {
@@ -102,26 +97,24 @@ const Navbar = () => {
 
   return (
     <>
-    <nav
-    ref={navRef}
-    className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-zinc-900 text-white py-28 gap-y-10 top-0 md:w-1/2 md:left-1/2"
-    >
-       <div className="flex flex-col text-5xl gap-y-2 sm:text-8xl">
-          {["home", "about", "projects", "contact"].map(
-            (section, index) => (
-              <div key={index} ref={(el) => (linksRef.current[index] = el)}>
-                <Link
-                  className="transition-all duration-300 cursor-pointer hover:text-accent"
-                  to={`${section}`}
-                  smooth
-                  offset={-50}
-                  duration={2000}
-                >
-                  {section}
-                </Link>
-              </div>
-            )
-          )}
+      <nav
+        ref={navRef}
+        className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-zinc-900 text-white py-28 gap-y-10 top-0 md:w-1/2 md:left-1/2"
+      >
+        <div className="flex flex-col text-5xl gap-y-2 sm:text-8xl">
+          {["home", "about", "projects", "contact"].map((section, index) => (
+            <div key={index} ref={(el) => (linksRef.current[index] = el)}>
+              <Link
+                className="transition-all duration-300 cursor-pointer hover:text-accent"
+                to={`${section}`}
+                smooth
+                offset={-50}
+                duration={2000}
+              >
+                {section}
+              </Link>
+            </div>
+          ))}
         </div>
         <div
           ref={contactRef}
@@ -135,23 +128,22 @@ const Navbar = () => {
           </div>
           <div className="font-light">
             <p className="tracking-wider text-white">Social Media</p>
-            <div className="flex flex-col flex-wrap md:flex-row gap-x-2">
+            <div className="flex gap-x-2">
               {socials.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className="text-sm leading-loose tracking-widest uppercase hover:text-accent transition-colors duration-300"
+                  className=" hover:text-accent transition-colors duration-300 text-3xl sm:text-4xl mt-1"
+                  target="_blank"
                 >
-                  {"{ "}
-                  {social.name}
-                  {" }"}
+                  {social.icon}
                 </a>
               ))}
             </div>
           </div>
         </div>
-    </nav>
-    <div
+      </nav>
+      <div
         className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black group cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
         onClick={toggleMenu}
         style={

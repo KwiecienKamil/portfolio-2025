@@ -50,9 +50,12 @@ const About = () => {
               Frontend developer with commercial experience building web
               applications for international brand. Successfully delivered
               high-quality websites and applications used by thousands of users.
-              Dedicated to developing solutions that deliver strong business
-              impact while providing an enjoyable user experience.
             </p>
+            <ul className="list-disc text-black pl-5">
+              <li>0,5+ year experience as a Frontend Developer</li>
+              <li>International teams experience: Germany, UK, Poland</li>
+              <li>Took part in 3+ major product launches "Galaxy Unpacked"</li>
+            </ul>
             <img
               src={group}
               alt="Characteristics"

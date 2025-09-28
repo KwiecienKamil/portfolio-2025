@@ -39,7 +39,7 @@ const HeroHeader = () => {
         <Link
           to="projects"
           smooth
-          offset={0}
+          offset={-50}
           duration={2000}
           className="px-6 py-4 border-2 text-black hover:border-accent duration-300 cursor-pointer shadow-lg"
         >
