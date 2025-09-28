@@ -30,12 +30,12 @@ import Reveal from "../../Reveal";
 const TechStack = () => {
   return (
     <Reveal>
-      <div className="flex items-center justify-center sm:justify-start mt-[5rem] pb-2 text-light px-[10%]">
+      <div className="flex items-center  sm:justify-start mt-8 pb-2 text-light">
         <p className="dark:text-accent">Tech Stack</p>
         <span>
-          <TbArrowsRight className="ml-4 animate-pulse" />
+          <TbArrowsRight className="ml-4 animate-pulse text-accent" />
         </span>
-        <div className="min-w-[500px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 text-xs lg:text-sm">
+        <div className="w-full md:min-w-[400px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  text-xs lg:text-sm">
           <SkillItem
             icon={<FaReact size="1.6em" />}
             skill="React.js"
@@ -73,7 +73,7 @@ const TechStack = () => {
             skill="Bootstrap"
           />
           <SkillItem
-            id="Nextjs"
+            id="next"
             icon={<FaWordpress size="1.6em" />}
             skill="Wordpress"
           />
@@ -83,7 +83,7 @@ const TechStack = () => {
             skill="Node.js"
           />
           <SkillItem
-            id="express"
+            id="next"
             icon={<SiExpress size="1.6em" color="text-white" />}
             skill="Express.js"
           />
@@ -92,7 +92,7 @@ const TechStack = () => {
             icon={<GrMysql size="1.6em" color="text-react" />}
             skill="Mysql"
           />
-          <SkillItem id="Nextjs" icon={<TbSql size="1.6em" />} skill="SQL" />
+          <SkillItem id="next" icon={<TbSql size="1.6em" />} skill="SQL" />
           <SkillItem
             id="rtl"
             icon={<SiTestinglibrary size="1.6em" />}

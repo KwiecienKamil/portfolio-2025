@@ -109,7 +109,7 @@ export const projectsInfo = [
     id: 1,
     title: "Mini game for a global brand",
     stack: ["React.js", "JavaScript", "CSS", "AWS"],
-    webLink: "https://www.samsung.com/pl/offer/smartthings-offers/#quiz",
+    webLink: "https://www.samsung.com/pl/offer/summer/#game-component",
     githubLink: "",
     img: "/assets/12.png",
   },

@@ -7,6 +7,7 @@ import { services } from "../utils/Helpers";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
+import TechStack from "./TechStack";
 
 const About = () => {
   const carouselRef = useRef(null);
@@ -45,22 +46,24 @@ const About = () => {
           </div>
         </Reveal>
         <Reveal>
-          <div className="w-full ml-auto lg:w-[90%]">
+          <div className="w-full ml-auto lg:w-[90%] pr-[2&] sm:pr-[5%]">
             <p className="text-md sm:text-xl leading-relaxed text-justify">
               Frontend developer with commercial experience building web
               applications for international brand. Successfully delivered
               high-quality websites and applications used by thousands of users.
             </p>
-            <ul className="list-disc text-black pl-5">
-              <li>0,5+ year experience as a Frontend Developer</li>
+              <ul className="text-accent font-semibold text-lg mt-2 list-disc pl-4" >
+              <li>Bachelor of Engineering in Computer Science</li>
+              <li>1+ year experience as a Frontend Developer</li>
               <li>International teams experience: Germany, UK, Poland</li>
               <li>Took part in 3+ major product launches "Galaxy Unpacked"</li>
             </ul>
-            <img
+            <TechStack />
+            {/* <img
               src={group}
               alt="Characteristics"
               className="w-[80%] mx-auto my-8"
-            />
+            /> */}
             {/* <div className="flex gap-8 mt-4 justify-center">
               <Link
                 to="contact"
