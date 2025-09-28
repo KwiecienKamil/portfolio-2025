@@ -96,7 +96,7 @@ const TechStack = () => {
           <SkillItem
             id="rtl"
             icon={<SiTestinglibrary size="1.6em" />}
-            skill="Unit Test"
+            skill="RTL"
           />
           <SkillItem
             id="cypr"

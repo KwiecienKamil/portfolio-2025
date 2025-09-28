@@ -2,11 +2,9 @@ import "../css/skills.css";
 import Reveal from "../../Reveal";
 import SectionHeader from "./SectionHeader";
 import me from "../../public/assets/trimed.png";
-import group from "../../public/assets/group5.png";
 import { services } from "../utils/Helpers";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { Link } from "react-scroll";
 import TechStack from "./TechStack";
 
 const About = () => {
@@ -53,41 +51,15 @@ const About = () => {
               high-quality websites and applications used by thousands of users.
             </p>
               <ul className="text-accent font-semibold text-lg mt-2 list-disc pl-4" >
-              <li>Bachelor of Engineering in Computer Science</li>
+              <li>Bachelor of Engineering in Computer Science (Graduation 2026)</li>
               <li>1+ year experience as a Frontend Developer</li>
               <li>International teams experience: Germany, UK, Poland</li>
               <li>Took part in 3+ major product launches "Galaxy Unpacked"</li>
             </ul>
             <TechStack />
-            {/* <img
-              src={group}
-              alt="Characteristics"
-              className="w-[80%] mx-auto my-8"
-            /> */}
-            {/* <div className="flex gap-8 mt-4 justify-center">
-              <Link
-                to="contact"
-                smooth
-                offset={0}
-                duration={2000}
-                className="px-6 py-4 border-1 border-accent bg-accent text-white hover:bg-[#dec012] hover:text-black duration-500 cursor-pointer shadow-lg"
-              >
-                Contact
-              </Link>
-              <Link
-                to="projects"
-                smooth
-                offset={0}
-                duration={2000}
-                className="px-8 py-4 border-1 border-black hover:bg-black hover:text-white duration-500 cursor-pointer shadow-lg"
-              >
-                Projects
-              </Link>
-            </div> */}
           </div>
         </Reveal>
       </div>
-
       <div ref={carouselRef} className="relative w-full overflow-hidden py-8">
         <div className="carousel-track flex gap-5">
           {[...services, ...services].map((service, idx) => (
