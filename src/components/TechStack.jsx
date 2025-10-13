@@ -17,6 +17,8 @@ import {
   SiRedux,
   SiTailwindcss,
   SiVitest,
+  SiJest,
+  SiDocker
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { SiTestinglibrary } from "react-icons/si";
@@ -98,17 +100,17 @@ const TechStack = () => {
             icon={<SiTestinglibrary size="1.6em" />}
             skill="RTL"
           />
+          <SkillItem id="rtl" icon={<SiVitest size="1.6em" />} skill="Vitest" />
+          <SkillItem id="rtl" icon={<SiJest size="1.6em" />} skill="Jest" />
           <SkillItem
             id="cypr"
             icon={<SiCypress size="1.6em" />}
             skill="Cypress"
           />
-          <SkillItem id="rtl" icon={<SiVitest size="1.6em" />} skill="Vitest" />
-          <SkillItem id="redux" icon={<SiRedux size="1.6em" />} skill="Redux" />
+          <SkillItem id="firebase" icon={<FaAws size="1.6em" />} skill="AWS" />
+          <SkillItem id="tailwind" icon={<SiDocker size="1.6em" />} skill="Docker" />
           <SkillItem id="jira" icon={<FaJira size="1.6em" />} skill="Jira" />
           <SkillItem id="git" icon={<BiLogoGit size="1.6em" />} skill="Git" />
-          <SkillItem id="firebase" icon={<FaAws size="1.6em" />} skill="AWS" />
-          <SkillItem id="figma" icon={<FaFigma size="1.6em" />} skill="Figma" />
         </div>
       </div>
     </Reveal>

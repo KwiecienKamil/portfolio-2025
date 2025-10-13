@@ -52,7 +52,6 @@ const About = () => {
             </p>
               <ul className="text-accent font-semibold text-lg mt-2 list-disc pl-4" >
               <li>Bachelor of Engineering in Computer Science (Graduation 2026)</li>
-              <li>1+ year experience as a Frontend Developer</li>
               <li>International teams experience: Germany, UK, Poland</li>
               <li>Took part in 3+ major product launches "Galaxy Unpacked"</li>
             </ul>
