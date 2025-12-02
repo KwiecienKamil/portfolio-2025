@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { contactInfo } from "../utils/Helpers";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const form = useRef();
@@ -16,14 +17,12 @@ const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          alert("✅ Message sent successfully!");
+        () => {
+          toast.success("Wiadomość wysłana, dziękuję!");
           form.current.reset();
         },
-        (error) => {
-          console.log(error.text);
-          alert("❌ Something went wrong, try again!");
+        () => {
+          toast.error("Wystąpił błąd, spróbuj ponownie");
         }
       );
   };

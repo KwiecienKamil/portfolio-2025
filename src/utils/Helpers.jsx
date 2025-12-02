@@ -115,7 +115,7 @@ export const projectsInfo = [
   },
   {
     id: 2,
-    title: "Ogarnij.To",
+    title: "Ogarnijto.org",
     stack: [
       "React.js",
       "TypeScript",
@@ -130,7 +130,7 @@ export const projectsInfo = [
     ],
     webLink: "https://app.ogarnijto.org/?beta=true",
     githubLink: "https://github.com/KwiecienKamil/portal-studenta",
-    img: "/assets/13.png",
+    img: "/assets/14.png",
   },
   {
     id: 3,
