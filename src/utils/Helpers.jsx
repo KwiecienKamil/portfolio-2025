@@ -154,8 +154,8 @@ export const projectsInfo = [
     id: 5,
     title: "Hotel landing page",
     stack: ["React", "JavaScript", "Tailwind"],
-    webLink: "https://github.com/KwiecienKamil/MountainHotelWebsite",
-    githubLink: "https://adorable-clafoutis-0fc878.netlify.app/",
+    webLink: "https://adorable-clafoutis-0fc878.netlify.app/",
+    githubLink: "https://github.com/KwiecienKamil/MountainHotelWebsite",
     img: "/assets/10.png",
   },
 ];
