@@ -46,12 +46,10 @@ const About = () => {
         <Reveal>
           <div className="w-full ml-auto lg:w-[90%] pr-[2&] sm:pr-[5%]">
             <p className="text-md sm:text-xl leading-relaxed text-justify">
-              Frontend developer with commercial experience building web
-              applications for international brand. Successfully delivered
-              high-quality websites and applications used by thousands of users.
+              Frontend Developer with <span className="text-accent">1+ year experience</span> working in international teams and contributing to large product releases using <span className="text-[#5fd2f1]">React.js</span>, <span className="text-[#007acc]">TypeScript</span>, <span className="text-[#2965f1]">CSS</span>, <span className="text-[#3c873a]">Node.js</span>, <span className="text-[#ffa611]">AWS</span>. Focused on developing modern web applications with <span className="text-accent">AI features</span> that help businesses automate tasks, improve customer experience and integrate AI APIs into practical solutions.
             </p>
               <ul className="text-accent font-semibold text-lg mt-2 list-disc pl-4" >
-              <li>Bachelor of Engineering in Computer Science (Graduation 2026)</li>
+              <li>Bachelor of Engineering in Computer Science</li>
               <li>International teams experience: Germany, UK, Poland</li>
               <li>Took part in 3+ major product launches "Galaxy Unpacked"</li>
             </ul>

@@ -38,6 +38,7 @@ const Projects = () => {
                   href={project.githubLink}
                   className="px-8 py-4 border-2 text-black hover:border-accent duration-300 cursor-pointer shadow-lg hover:animate-pulse"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Code
                 </a>
@@ -45,6 +46,7 @@ const Projects = () => {
               <a
                 href={project.webLink}
                 className="px-8 py-4 border-2 text-black hover:border-green-500 duration-300 cursor-pointer shadow-lg"
+                rel="noreferrer"
                 target="_blank"
               >
                 Live

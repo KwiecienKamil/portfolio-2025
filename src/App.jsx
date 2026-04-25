@@ -11,7 +11,6 @@ function App() {
   const [openNav, setOpenNav] = useState(true);
   const [theme, setTheme] = useState("dark");
   return (
-    <>
       <div className={`font-semibold ${theme} font-roboto`}>
         <Section theme="light" setTheme={setTheme}>
           <Home setOpenNav={setOpenNav} openNav={openNav} />
@@ -26,7 +25,6 @@ function App() {
           <Contact />
         </Reveal>
       </div>
-    </>
   );
 }
 

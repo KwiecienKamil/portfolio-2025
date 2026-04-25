@@ -60,7 +60,7 @@ export const contactInfo = [
     value: "kamilkwiecien9@gmail.com",
   },
   {
-    id: 1,
+    id: 2,
     type: "Phone",
     value: "+48 533 532 056",
   },
@@ -123,6 +123,7 @@ export const projectsInfo = [
       "CSS",
       "Tailwind",
       "Node.js",
+      "Express.js",
       "MySql",
       "OpenAI",
       "OAuth2",
