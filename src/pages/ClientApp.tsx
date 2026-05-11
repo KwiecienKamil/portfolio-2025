@@ -1,7 +1,3 @@
-import React from 'react'
-
 export const ClientApp = () => {
-  return (
-    <div>ClientApp</div>
-  )
-}
+  return <div>Client app</div>;
+};

@@ -28,7 +28,6 @@ import { FaAws } from "react-icons/fa";
 import { TbSql } from "react-icons/tb";
 import { TbArrowsRight } from "react-icons/tb";
 import Reveal from "../../Reveal";
-
 const TechStack = () => {
   return (
     <Reveal>

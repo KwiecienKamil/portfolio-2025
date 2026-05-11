@@ -10,6 +10,7 @@ const HeroHeader = () => {
           Hello, I'm <span className="text-accent font-[900]">Kamil</span>
         </h1>
         <div className="text-5xl text-black font-story">
+
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString().pauseFor(2500).deleteAll().start();
