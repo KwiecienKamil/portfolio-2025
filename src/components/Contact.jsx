@@ -14,7 +14,7 @@ const Contact = () => {
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         form.current,
-        import.meta.env.VITE_PUBLIC_KEY
+        import.meta.env.VITE_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -23,7 +23,7 @@ const Contact = () => {
         },
         () => {
           toast.error("Wystąpił błąd, spróbuj ponownie");
-        }
+        },
       );
   };
 
@@ -33,21 +33,21 @@ const Contact = () => {
       className="bg-black text-white flex flex-col sm:flex-row items-center justify-between px-[2%] sm:px-[5%] py-24"
     >
       <div className="flex flex-col mb-8">
-        <h4 className="text-5xl sm:text-6xl xl:text-7xl mb-2">
+        <h4 className="text-4xl sm:text-6xl xl:text-7xl mb-2">
           Let's work <span className="text-accent">together!</span>
         </h4>
         <div className="flex flex-row sm:flex-col justify-between sm:justify-start gap-2 mt-2  sm:mt-0">
           {contactInfo.map((item) => (
             <div key={item.id}>
-              <span className="text-accent text-xl sm:text-3xl">
+              <span className="text-accent text-lg sm:text-3xl">
                 {item.type}
               </span>
-              <p className="text-lg sm:text-xl">{item.value}</p>
+              <p className="text-md sm:text-xl">{item.value}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="w-[24rem] md:w-[30rem]">
+      <div className="w-[22rem] md:w-[30rem]">
         <form
           ref={form}
           onSubmit={sendEmail}
