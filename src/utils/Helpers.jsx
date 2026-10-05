@@ -162,3 +162,95 @@ export const projectsInfo = [
     img: "/assets/10.png",
   },
 ];
+
+export const clientServices = [
+  {
+    id: 1,
+    name: "Strony internetowe",
+    icon: <MdOutlineWeb />,
+  },
+  {
+    id: 2,
+    name: "Bazy danych",
+    icon: <FaDatabase />,
+  },
+  {
+    id: 3,
+    name: "API i backend",
+    icon: <FaServer />,
+  },
+  {
+    id: 4,
+    name: "Zarządzanie danymi",
+    icon: <SiRedux />,
+  },
+  {
+    id: 5,
+    name: "Integracje AI",
+    icon: <FaRobot />,
+  },
+  {
+    id: 6,
+    name: "Hosting i wdrożenie",
+    icon: <RiUploadCloud2Fill />,
+  },
+  {
+    id: 7,
+    name: "Widoczność online",
+    icon: <FaMoneyCheckDollar />,
+  },
+];
+
+export const clientCaseStudies = [
+  {
+    id: 5,
+    title: "Strona hotelu",
+    stack: ["React", "JavaScript", "Tailwind"],
+    webLink: "https://adorable-clafoutis-0fc878.netlify.app/",
+    img: "/assets/10.png",
+    result: "Strona pod markę obiektu — czytelna oferta i kontakt na telefonie.",
+  },
+  {
+    id: 1,
+    title: "Gra kampanijna dla globalnej marki",
+    stack: ["React.js", "JavaScript", "CSS", "AWS"],
+    webLink: "https://www.samsung.com/pl/offer/summer/#game-component",
+    img: "/assets/12.png",
+    result: "Interaktywny moduł kampanijny dla globalnej marki.",
+  },
+  {
+    id: 3,
+    title: "Productive",
+    stack: ["React.js", "TypeScript", "Tailwind", "Node.js"],
+    webLink: "https://productive-task-management-app-d4hq.vercel.app/",
+    img: img2,
+    result: "Aplikacja webowa z naciskiem na UX i responsywność.",
+  },
+];
+
+export const clientProcessSteps = [
+  {
+    id: 1,
+    title: "Rozmowa",
+    description:
+      "Krótka rozmowa o celu strony, grupie docelowej i terminie. Ustalamy zakres i budżet.",
+  },
+  {
+    id: 2,
+    title: "Projekt i treści",
+    description:
+      "Układ sekcji, kolorystyka i treści. Wiesz, co dostaniesz, zanim zaczniemy kod.",
+  },
+  {
+    id: 3,
+    title: "Wdrożenie",
+    description:
+      "Kod, responsywność, podstawowe SEO i testy na telefonie oraz desktopie.",
+  },
+  {
+    id: 4,
+    title: "Start i wsparcie",
+    description:
+      "Publikacja, domena/hosting i poprawki po starcie — możliwość dalszej opieki.",
+  },
+];

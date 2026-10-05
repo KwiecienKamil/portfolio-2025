@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { ClientApp } from "./pages/ClientApp.js";
+import { ClientApp } from "./pages/ClientApp.tsx";
 
 const router = createBrowserRouter([
   {
@@ -12,14 +12,14 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/usluga",
+    path: "/usługa",
     element: <ClientApp />,
-  }
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-      <ToastContainer position="top-center" theme="dark" />
-       <RouterProvider router={router} />
-  </StrictMode>
+    <ToastContainer position="top-center" theme="dark" />
+    <RouterProvider router={router} />
+  </StrictMode>,
 );

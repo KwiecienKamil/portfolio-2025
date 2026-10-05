@@ -1,9 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export function Model(props) {
+gsap.registerPlugin(ScrollTrigger);
+
+export function Model({ scrollTriggerId = "home", ...props }) {
   const group = useRef();
   const ballRef = useRef();
   const { nodes, materials, animations } = useGLTF(
@@ -16,7 +19,7 @@ export function Model(props) {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#home",
+        trigger: `#${scrollTriggerId}`,
         end: "bottom center",
         scrub: true,
       },
@@ -51,7 +54,7 @@ export function Model(props) {
       duration: 2,
       ease: "power1.inOut",
     });
-  }, []);
+  }, [scrollTriggerId]);
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
