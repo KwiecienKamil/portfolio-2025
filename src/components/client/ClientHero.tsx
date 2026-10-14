@@ -54,22 +54,22 @@ export function ClientHero() {
       </figure>
       <div className="px-[5%] pb-[5%] z-2">
         <div className="mb-6 cursor-default">
-          <h1 className="text-[50px] sm:text-[80px] font-[600] leading-tight">
-            Strony WWW dla{" "}
+          <h1 className="text-[70px] sm:text-[90px] font-[600] leading-none">
+            Strona internetowa dla{" "}
             <span className="text-accent font-[900]">Twojej firmy</span>
           </h1>
-          <p className="text-xl sm:text-3xl text-black/80 font-story max-w-3xl mt-4">
-            Szybkie, responsywne witryny — od wizytówki po rozbudowany projekt.
-            Projekt, wdrożenie i wsparcie po starcie.
+          <p className="text-3xl sm:text-5xl text-black font-story max-w-3xl mt-4">
+            Piękne, nowoczesne strony z animacjami w dobrej cenie. Przyciągnij
+            nowych klientów i zrób wrażenie na innych.
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-4 sm:gap-8">
+        <div className="flex items-center gap-8">
           <Link
             to="realizacje"
             smooth
             offset={-50}
             duration={2000}
-            className="px-6 py-4 border-2 text-black hover:border-accent duration-300 cursor-pointer shadow-lg"
+            className="px-6 py-4 border-2 text-black hover:border-accent duration-300 cursor-pointer"
           >
             Realizacje
           </Link>

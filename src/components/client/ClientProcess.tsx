@@ -3,9 +3,9 @@ import { clientProcessSteps } from "../../utils/Helpers";
 
 export function ClientProcess() {
   return (
-    <section id="proces" className="my-12 px-[5%] pb-12">
+    <section id="proces" className="my-12">
       <SectionHeader sectionName="Proces" />
-      <ol className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      <ol className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 px-[5%] pb-12">
         {clientProcessSteps.map((step, index) => (
           <li
             key={step.id}

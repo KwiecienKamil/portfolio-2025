@@ -163,67 +163,35 @@ export const projectsInfo = [
   },
 ];
 
-export const clientServices = [
-  {
-    id: 1,
-    name: "Strony internetowe",
-    icon: <MdOutlineWeb />,
-  },
-  {
-    id: 2,
-    name: "Bazy danych",
-    icon: <FaDatabase />,
-  },
-  {
-    id: 3,
-    name: "API i backend",
-    icon: <FaServer />,
-  },
-  {
-    id: 4,
-    name: "Zarządzanie danymi",
-    icon: <SiRedux />,
-  },
-  {
-    id: 5,
-    name: "Integracje AI",
-    icon: <FaRobot />,
-  },
-  {
-    id: 6,
-    name: "Hosting i wdrożenie",
-    icon: <RiUploadCloud2Fill />,
-  },
-  {
-    id: 7,
-    name: "Widoczność online",
-    icon: <FaMoneyCheckDollar />,
-  },
-];
-
 export const clientCaseStudies = [
   {
     id: 5,
     title: "Strona hotelu",
+    category: "Hotel · Landing page",
     stack: ["React", "JavaScript", "Tailwind"],
     webLink: "https://adorable-clafoutis-0fc878.netlify.app/",
-    img: "/assets/10.png",
+    poster: "/assets/10.png",
+    videoSrc: "",
     result: "Strona pod markę obiektu — czytelna oferta i kontakt na telefonie.",
   },
   {
     id: 1,
     title: "Gra kampanijna dla globalnej marki",
+    category: "Kampania · Interakcja",
     stack: ["React.js", "JavaScript", "CSS", "AWS"],
     webLink: "https://www.samsung.com/pl/offer/summer/#game-component",
-    img: "/assets/12.png",
+    poster: "/assets/12.png",
+    videoSrc: "",
     result: "Interaktywny moduł kampanijny dla globalnej marki.",
   },
   {
     id: 3,
     title: "Productive",
+    category: "Aplikacja webowa · SaaS",
     stack: ["React.js", "TypeScript", "Tailwind", "Node.js"],
     webLink: "https://productive-task-management-app-d4hq.vercel.app/",
-    img: img2,
+    poster: img2,
+    videoSrc: "",
     result: "Aplikacja webowa z naciskiem na UX i responsywność.",
   },
 ];

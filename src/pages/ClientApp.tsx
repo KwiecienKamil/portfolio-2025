@@ -2,15 +2,15 @@ import { useState } from "react";
 import Reveal from "../../Reveal";
 import Section from "../components/Section";
 import { ClientHero } from "../components/client/ClientHero";
-import { ClientOffer } from "../components/client/ClientOffer";
-import { ClientProjects } from "../components/client/ClientProjects";
+import { ClientOffer } from "../components/client/ClientOffer.jsx";
+import { ClientProjects } from "../components/client/ClientProjects.jsx";
 import { ClientProcess } from "../components/client/ClientProcess";
 
 export const ClientApp = () => {
-  const [, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("dark");
 
   return (
-    <div className="font-semibold dark font-roboto bg-zinc-900">
+    <div className={`font-semibold ${theme} font-roboto overflow-x-hidden`}>
       <Section theme="light" setTheme={setTheme}>
         <ClientHero />
       </Section>

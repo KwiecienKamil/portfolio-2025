@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/usługa",
+    path: "/usluga",
     element: <ClientApp />,
   },
 ]);
