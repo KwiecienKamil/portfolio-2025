@@ -72,6 +72,36 @@
   );
 }
 
+.client-offer-panel {
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #fff9e8 42%,
+    #ffffff 100%
+  );
+  box-shadow:
+    0 32px 64px -48px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(209, 176, 0, 0.22);
+}
+
+.client-offer-card {
+  background: #ffffff;
+  box-shadow: 0 12px 40px -28px rgba(0, 0, 0, 0.35);
+}
+
+.client-offer-card--accent {
+  background: linear-gradient(
+    135deg,
+    rgba(209, 176, 0, 0.18) 0%,
+    #ffffff 55%,
+    #ffffff 100%
+  );
+}
+
+.client-offer-card--warm {
+  background: linear-gradient(160deg, #fff5e0 0%, #ffffff 70%);
+}
+
 @keyframes case-ken-burns {
   0% {
     transform: scale(1.05) translate3d(0, 0, 0);

@@ -16,6 +16,8 @@ import img1 from "../../public/assets/12.png";
 import img2 from "../../public/assets/8.png";
 import img3 from "../../public/assets/13.png";
 import img4 from "../../public/assets/9.png";
+import shawermaPoster from "../../public/assets/shawerma.png";
+import ogarnijtoPoster from "../../public/assets/14.png";
 
 export const navButtons = [
   {
@@ -165,14 +167,15 @@ export const projectsInfo = [
 
 export const clientCaseStudies = [
   {
-    id: 5,
-    title: "Strona hotelu",
-    category: "Hotel · Landing page",
-    stack: ["React", "JavaScript", "Tailwind"],
-    webLink: "https://adorable-clafoutis-0fc878.netlify.app/",
-    poster: "/assets/10.png",
+    id: 6,
+    title: "Kebab Shawerma",
+    category: "Gastronomia · Strona firmowa",
+    stack: ["React", "TypeScript", "Tailwind"],
+    webLink: "https://www.shawerma-kebab.pl/",
+    poster: shawermaPoster,
     videoSrc: "",
-    result: "Strona pod markę obiektu — czytelna oferta i kontakt na telefonie.",
+    result:
+      "Strona dla lokalnego kebaba — menu, godziny otwarcia i szybki kontakt z telefonu.",
   },
   {
     id: 1,
@@ -180,19 +183,29 @@ export const clientCaseStudies = [
     category: "Kampania · Interakcja",
     stack: ["React.js", "JavaScript", "CSS", "AWS"],
     webLink: "https://www.samsung.com/pl/offer/summer/#game-component",
-    poster: "/assets/12.png",
+    poster: img1,
     videoSrc: "",
     result: "Interaktywny moduł kampanijny dla globalnej marki.",
   },
   {
-    id: 3,
-    title: "Productive",
-    category: "Aplikacja webowa · SaaS",
-    stack: ["React.js", "TypeScript", "Tailwind", "Node.js"],
-    webLink: "https://productive-task-management-app-d4hq.vercel.app/",
-    poster: img2,
+    id: 2,
+    title: "Ogarnijto.org",
+    category: "Aplikacja webowa · AI",
+    stack: [
+      "React.js",
+      "TypeScript",
+      "Redux",
+      "Node.js",
+      "MySQL",
+      "Supabase",
+      "OpenAI",
+      "Stripe",
+    ],
+    webLink: "https://ogarnijto.org/",
+    poster: ogarnijtoPoster,
     videoSrc: "",
-    result: "Aplikacja webowa z naciskiem na UX i responsywność.",
+    result:
+      "Platforma dla studentów z asystentem AI — rejestracja, płatności i narzędzia do nauki.",
   },
 ];
 

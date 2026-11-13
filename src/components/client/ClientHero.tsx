@@ -10,10 +10,10 @@ export function ClientHero() {
   return (
     <section
       id="start"
-      className="w-full h-[90vh] bg-white flex flex-col justify-end relative overflow-hidden"
+      className=" w-full h-[90vh] bg-white flex flex-col justify-end relative overflow-hidden"
     >
       <figure
-        className="absolute inset-0 z-1"
+        className="absolute inset-0 z-1 pb-12"
         style={{ width: "100vw", height: "100vh", overflow: "hidden" }}
       >
         <Canvas
@@ -52,15 +52,15 @@ export function ClientHero() {
           </Environment>
         </Canvas>
       </figure>
-      <div className="px-[5%] pb-[5%] z-2">
+      <div className=" px-[5%] pb-[5%] z-2">
         <div className="mb-6 cursor-default">
           <h1 className="text-[70px] sm:text-[90px] font-[600] leading-none">
             Strona internetowa dla{" "}
             <span className="text-accent font-[900]">Twojej firmy</span>
           </h1>
-          <p className="text-3xl sm:text-5xl text-black font-story max-w-3xl mt-4">
-            Piękne, nowoczesne strony z animacjami w dobrej cenie. Przyciągnij
-            nowych klientów i zrób wrażenie na innych.
+          <p className="text-3xl sm:text-5xl text-black font-story max-w-6xl mt-4">
+            Piękne, nowoczesne strony z animacjami w najlepszej cenie.
+            Przyciągnij nowych klientów i zrób wrażenie na innych.
           </p>
         </div>
         <div className="flex items-center gap-8">
