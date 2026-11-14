@@ -102,6 +102,27 @@
   background: linear-gradient(160deg, #fff5e0 0%, #ffffff 70%);
 }
 
+.client-section-panel {
+  background: linear-gradient(
+    160deg,
+    #ffffff 0%,
+    #fffdf6 45%,
+    #ffffff 100%
+  );
+  box-shadow:
+    0 28px 56px -40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(209, 176, 0, 0.2);
+  color: #0a0a0a;
+}
+
+.client-section-muted {
+  color: #3f3f46;
+}
+
+.client-section-body {
+  color: #18181b;
+}
+
 @keyframes case-ken-burns {
   0% {
     transform: scale(1.05) translate3d(0, 0, 0);

@@ -4,7 +4,7 @@ import Section from "../components/Section";
 import { ClientHero } from "../components/client/ClientHero";
 import { ClientOffer } from "../components/client/ClientOffer.jsx";
 import { ClientProjects } from "../components/client/ClientProjects.jsx";
-import { ClientProcess } from "../components/client/ClientProcess";
+import { ClientProcess } from "../components/client/ClientProcess.jsx";
 
 export const ClientApp = () => {
   const [theme, setTheme] = useState("dark");
