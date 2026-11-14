@@ -220,7 +220,7 @@ export const clientProcessSteps = [
     id: 2,
     title: "Projekt i treści",
     description:
-      "Układ sekcji, kolorystyka i treści. Wiesz, co dostaniesz, zanim zaczniemy kod.",
+      "Układ sekcji, kolorystyka i treści. Pokazuje przykładową stronę i robimy dowolne poprawki.",
   },
   {
     id: 3,

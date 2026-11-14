@@ -18,7 +18,7 @@ import {
   SiTailwindcss,
   SiVitest,
   SiJest,
-  SiDocker
+  SiDocker,
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { SiTestinglibrary } from "react-icons/si";
@@ -32,7 +32,7 @@ const TechStack = () => {
   return (
     <Reveal>
       <div className="flex items-center  sm:justify-start mt-8 pb-2 text-light">
-        <p className="dark:text-accent">Tech Stack</p>
+        <p className="dark:text-black">Tech Stack</p>
         <span>
           <TbArrowsRight className="ml-4 animate-pulse text-accent" />
         </span>
@@ -107,7 +107,11 @@ const TechStack = () => {
             skill="Cypress"
           />
           <SkillItem id="firebase" icon={<FaAws size="1.6em" />} skill="AWS" />
-          <SkillItem id="tailwind" icon={<SiDocker size="1.6em" />} skill="Docker" />
+          <SkillItem
+            id="tailwind"
+            icon={<SiDocker size="1.6em" />}
+            skill="Docker"
+          />
           <SkillItem id="jira" icon={<FaJira size="1.6em" />} skill="Jira" />
           <SkillItem id="git" icon={<BiLogoGit size="1.6em" />} skill="Git" />
         </div>

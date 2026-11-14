@@ -58,9 +58,8 @@ export function ClientHero() {
             Strona internetowa dla{" "}
             <span className="text-accent font-[900]">Twojej firmy</span>
           </h1>
-          <p className="text-3xl sm:text-5xl text-black font-story max-w-6xl mt-4">
+          <p className="text-xl sm:text-3xl text-black max-w-6xl ">
             Piękne, nowoczesne strony z animacjami w najlepszej cenie.
-            Przyciągnij nowych klientów i zrób wrażenie na innych.
           </p>
         </div>
         <div className="flex items-center gap-8">

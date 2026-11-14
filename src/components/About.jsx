@@ -47,8 +47,8 @@ const About = () => {
           <div className="w-full ml-auto lg:w-[90%] pr-[2&] sm:pr-[5%]">
             <p className="text-md sm:text-xl leading-relaxed text-justify">
               Frontend Developer with{" "}
-              <span className="text-accent">1+ year experience</span> working in
-              international teams and contributing to large product releases
+              <span className="text-accent">3+ years experience</span> working
+              in international teams and contributing to large product releases
               using <span className="text-[#5fd2f1]">React.js</span>,{" "}
               <span className="text-[#007acc]">TypeScript</span>,{" "}
               <span className="text-[#2965f1]">CSS</span>,{" "}
@@ -59,7 +59,7 @@ const About = () => {
               businesses automate tasks, improve customer experience and
               integrate AI APIs into practical solutions.
             </p>
-            <ul className="text-accent font-semibold text-lg mt-2 list-disc pl-4">
+            <ul className="text-black font-semibold text-lg mt-2 list-disc pl-4">
               <li>Bachelor of Engineering in Computer Science</li>
               <li>International teams experience: Germany, UK, Poland</li>
               <li>Took part in 3+ major product launches "Galaxy Unpacked"</li>
