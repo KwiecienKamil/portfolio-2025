@@ -10,7 +10,9 @@ export const ClientApp = () => {
   const [theme, setTheme] = useState("dark");
 
   return (
-    <div className={`font-semibold ${theme} font-roboto overflow-x-hidden`}>
+    <div
+      className={`font-semibold ${theme} font-roboto overflow-x-clip w-full max-w-[100vw]`}
+    >
       <Section theme="light" setTheme={setTheme}>
         <ClientHero />
       </Section>

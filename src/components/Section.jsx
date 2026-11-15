@@ -15,7 +15,7 @@ const Section = ({ children, theme, setTheme }) => {
     }
   });
   return ( 
-    <section className="bg-white dark:bg-black w-full z-1 rounded-3xl overflow-hidden" ref={container}>
+    <section className="bg-white dark:bg-black w-full max-w-full z-1 rounded-2xl sm:rounded-3xl overflow-hidden" ref={container}>
       {children}
     </section>
   );

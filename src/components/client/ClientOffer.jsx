@@ -3,7 +3,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { FaCheck, FaMobileAlt, FaRocket, FaSearch } from "react-icons/fa";
 import { MdOutlineWeb, MdSupportAgent } from "react-icons/md";
 import { RiUploadCloud2Fill } from "react-icons/ri";
-import SectionHeader from "../SectionHeader";
+import { ClientSectionHeader } from "./ClientSectionHeader";
 
 const ROTATING_FOCUS = [
   "stronę od zera",
@@ -108,21 +108,21 @@ function MaintenanceList({ active }) {
   );
 }
 
-function StatChip({ label, value, active, delay = 0 }) {
-  return (
-    <motion.div
-      className="rounded-xl border-2 border-accent/50 bg-white px-4 py-3 text-center shadow-sm"
-      initial={{ opacity: 0, y: 16 }}
-      animate={active ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay, duration: 0.5 }}
-    >
-      <p className="text-xl sm:text-2xl font-poppins text-black font-semibold">
-        {value}
-      </p>
-      <p className="text-xs sm:text-sm text-zinc-600 mt-1">{label}</p>
-    </motion.div>
-  );
-}
+// function StatChip({ label, value, active, delay = 0 }) {
+//   return (
+//     <motion.div
+//       className="rounded-xl border-2 border-accent/50 bg-white px-4 py-3 text-center shadow-sm"
+//       initial={{ opacity: 0, y: 16 }}
+//       animate={active ? { opacity: 1, y: 0 } : {}}
+//       transition={{ delay, duration: 0.5 }}
+//     >
+//       <p className="text-lg sm:text-2xl font-poppins text-black font-semibold">
+//         {value}
+//       </p>
+//       <p className="text-xs sm:text-sm text-zinc-600 mt-1">{label}</p>
+//     </motion.div>
+//   );
+// }
 
 function BentoCard({
   children,
@@ -140,7 +140,7 @@ function BentoCard({
 
   return (
     <motion.article
-      className={`group relative overflow-hidden rounded-2xl border-2 border-zinc-200/90 p-6 sm:p-8 text-zinc-900 transition-all duration-300 hover:border-accent hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-30px_rgba(209,176,0,0.55)] ${variantClass} ${className}`}
+      className={`group relative overflow-hidden rounded-2xl border-2 border-zinc-200/90 p-4 sm:p-8 text-zinc-900 transition-all duration-300 hover:border-accent hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-30px_rgba(209,176,0,0.55)] min-w-0 ${variantClass} ${className}`}
       initial={{ opacity: 0, y: 36 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-8% 0px" }}
@@ -166,27 +166,31 @@ export function ClientOffer() {
   }, []);
 
   return (
-    <section id="oferta" ref={sectionRef} className="my-12 relative">
-      <SectionHeader sectionName="Co wchodzi w grę" />
+    <section
+      id="oferta"
+      ref={sectionRef}
+      className="my-8 sm:my-12 relative max-w-full"
+    >
+      <ClientSectionHeader sectionName="Co wchodzi w grę" />
 
-      <div className="px-[5%] mt-8">
-        <div className="client-offer-panel relative z-1 rounded-3xl overflow-hidden">
+      <div className="px-[4%] sm:px-[5%] mt-6 sm:mt-8 max-w-full">
+        <div className="client-offer-panel relative z-1 rounded-2xl sm:rounded-3xl overflow-hidden max-w-full">
           <div className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full  blur-3xl" />
           <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full  blur-3xl" />
 
-          <div className="relative px-6 sm:px-10 py-10 sm:py-12">
+          <div className="relative px-4 sm:px-10 py-8 sm:py-12">
             <motion.div
               className="max-w-5xl mb-10"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7 }}
             >
-              <p className="text-sm uppercase tracking-[0.25em] text-accent font-sourceCode mb-4 font-bold">
+              <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.25em] text-accent font-sourceCode mb-3 sm:mb-4 font-bold">
                 Tworzenie · Utrzymanie · Wsparcie
               </p>
-              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-poppins uppercase leading-tight text-black">
+              <h3 className="text-xl sm:text-4xl lg:text-5xl font-poppins uppercase leading-tight text-black">
                 Robię dla firm{" "}
-                <span className="inline-block min-w-[12ch] text-accent drop-shadow-sm">
+                <span className="block sm:inline sm:min-w-[12ch] text-accent drop-shadow-sm mt-1 sm:mt-0">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={focusIndex}
@@ -214,15 +218,15 @@ export function ClientOffer() {
                 delay={0.05}
                 variant="accent"
               >
-                <div className="flex items-start gap-4">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-black text-3xl shadow-md">
+                <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+                  <span className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-accent text-black text-2xl sm:text-3xl shadow-md">
                     <MdOutlineWeb />
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs uppercase tracking-widest text-accent font-bold">
                       Główna usługa
                     </p>
-                    <h4 className="text-2xl sm:text-3xl uppercase font-poppins mt-1 text-black">
+                    <h4 className="text-xl sm:text-3xl uppercase font-poppins mt-1 text-black leading-tight">
                       Strony internetowe dla firm
                     </h4>
                     <p className="text-zinc-700 mt-2 text-base sm:text-lg leading-relaxed">
@@ -239,15 +243,15 @@ export function ClientOffer() {
                 delay={0.12}
                 variant="warm"
               >
-                <div className="flex items-start gap-4">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-black text-accent text-3xl shadow-md">
+                <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+                  <span className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-black text-accent text-2xl sm:text-3xl shadow-md">
                     <MdSupportAgent />
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs uppercase tracking-widest text-amber-700 font-bold">
                       Po wdrożeniu
                     </p>
-                    <h4 className="text-2xl sm:text-3xl uppercase font-poppins mt-1 text-black">
+                    <h4 className="text-xl sm:text-3xl uppercase font-poppins mt-1 text-black leading-tight">
                       Utrzymanie WWW
                     </h4>
                     <p className="text-zinc-700 mt-2 text-base leading-relaxed">
@@ -353,11 +357,11 @@ export function ClientOffer() {
                 delay={0.3}
                 variant="accent"
               >
-                <div className="flex items-start gap-4 max-w-xl">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-black text-accent text-3xl">
+                <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 max-w-xl min-w-0">
+                  <span className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-black text-accent text-2xl sm:text-3xl">
                     <RiUploadCloud2Fill />
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-xl sm:text-2xl uppercase font-poppins text-black">
                       Publikacja i hosting
                     </h4>
@@ -367,25 +371,7 @@ export function ClientOffer() {
                     </p>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-3 w-full lg:max-w-md">
-                  <StatChip
-                    label="Responsywność"
-                    value="100%"
-                    active={inView}
-                  />
-                  <StatChip
-                    label="Proces"
-                    value="4 kroki"
-                    active={inView}
-                    delay={0.1}
-                  />
-                  <StatChip
-                    label="Po starcie"
-                    value="Opieka"
-                    active={inView}
-                    delay={0.2}
-                  />
-                </div>
+                <div className="grid grid-cols-1 min-[400px]:grid-cols-3 gap-2 sm:gap-3 w-full lg:max-w-md"></div>
               </BentoCard>
             </div>
 

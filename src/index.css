@@ -63,6 +63,8 @@
 }
 
 .offer-marquee-mask {
+  max-width: 100%;
+  overflow: hidden;
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -70,6 +72,12 @@
     black 88%,
     transparent
   );
+}
+
+.client-section-panel,
+.client-offer-panel {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .client-offer-panel {
